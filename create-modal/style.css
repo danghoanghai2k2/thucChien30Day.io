@@ -1,0 +1,113 @@
+*,
+*:before,
+*:after {
+   box-sizing: border-box;
+}
+* {
+   margin: 0;
+   padding: 0;
+}
+img,
+picture,
+svg,
+video {
+   display: block;
+   max-width: 100%;
+}
+input,
+select,
+textarea {
+   background-color: transparent;
+   outline: none;
+}
+button {
+   cursor: pointer;
+   background-color: transparent;
+   outline: none;
+   border: 0;
+}
+body {
+   min-height: 100vh;
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 1;
+   background: rgb(175, 236, 0);
+   background: linear-gradient(
+      33deg,
+      rgba(175, 236, 0, 1) 26%,
+      rgba(16, 236, 0, 1) 51%,
+      rgba(16, 226, 153, 1) 76%
+   );
+   display: flex;
+   justify-content: center;
+   font-family: sans-serif;
+}
+.btn__model--open {
+   margin: auto;
+   background-color: #fff;
+   padding: 20px 30px;
+   font-size: 20px;
+   border-radius: 7px;
+   transition: opacity 0.25s linear;
+   outline: none;
+   position: relative;
+}
+.btn__model--open:hover {
+   opacity: 0.8;
+}
+.modal__model {
+   position: absolute;
+   top: 0;
+   width: 100vw;
+   height: 100vh;
+   background-color: rgba(0, 0, 0, 0.6);
+   display: flex;
+}
+.model__inner {
+   width: 35%;
+   margin: auto;
+   z-index: 2;
+   background-color: #fff;
+   border-radius: 6px;
+   font-size: 18px;
+   overflow: hidden;
+   animation: modelShow 0.2s linear;
+   position: relative;
+}
+.model__header {
+   color: #fff;
+   background-color: #ef5777;
+   padding: 20px 10px;
+   display: flex;
+   justify-content: space-between;
+}
+.molel__body {
+   padding: 20px;
+}
+.molel__body h2,
+.molel__body p,
+.molel__body button {
+   margin: 10px auto;
+}
+.molel__body button {
+   color: #fff;
+   float: right;
+   background-color: #ef5777;
+   padding: 10px;
+   border-radius: 5px;
+   outline: none;
+}
+.hidden {
+   display: none;
+}
+@keyframes modelShow {
+   from {
+      opacity: 0;
+   }
+   to {
+      opacity: 0.7;
+   }
+   final {
+      opacity: 1;
+   }
+}

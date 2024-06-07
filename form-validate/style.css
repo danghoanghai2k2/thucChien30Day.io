@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300&family=Nunito&display=swap');
+*,
+*:before,
+*:after {
+   box-sizing: border-box;
+}
+* {
+   margin: 0;
+   padding: 0;
+}
+img,
+picture,
+svg,
+video {
+   display: block;
+   max-width: 100%;
+}
+input,
+select,
+textarea {
+   background-color: transparent;
+   outline: none;
+}
+button {
+   cursor: pointer;
+   background-color: transparent;
+   outline: none;
+   border: 0;
+}
+:root {
+   --suces__rerror: #3498db;
+   --rerror: #e74c3c;
+}
+body {
+   min-height: 100vh;
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 1;
+   background: rgb(54, 210, 255);
+   background: linear-gradient(49deg, rgba(54, 210, 255, 1) 27%, rgba(0, 145, 204, 1) 70%);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-family: 'Nunito', sans-serif;
+}
+.form__validate {
+   width: 400px;
+   border-radius: 12px;
+   background-color: #fff;
+   padding: 40px;
+}
+.form__validate .title {
+   text-align: center;
+   font-size: 40px;
+   font-weight: bolder;
+}
+.form__input {
+   margin: 20px 0;
+   position: relative;
+}
+.form__input input {
+   border: none;
+   outline: none;
+   border-bottom: 2px solid #ccc;
+   width: 100%;
+   font-size: 18px;
+   padding: 10px 0px;
+   color: var(--suces__rerror);
+   margin-bottom: 10px;
+}
+.boder__input {
+   position: relative;
+   top: -12px;
+   left: 0;
+   width: 0%;
+   height: 2px;
+   background-color: var(--suces__rerror);
+   transition: width 0.25s ease-in;
+}
+.form__input input:focus ~ p {
+   width: 100%;
+}
+.error span {
+   position: absolute;
+   bottom: -10px;
+   left: 0;
+   color: var(--rerror);
+}
+.error input {
+   border-bottom: 2px solid var(--rerror);
+}
+.error span {
+   color: var(--rerror);
+}
+.btn__submet {
+   width: 100%;
+   border-radius: 25px;
+   font-size: 20px;
+   font-weight: bolder;
+   background-color: var(--suces__rerror);
+   color: white;
+   padding: 10px;
+   margin: 10px 0;
+}

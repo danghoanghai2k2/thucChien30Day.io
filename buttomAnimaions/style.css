@@ -1,0 +1,133 @@
+*,
+*:before,
+*:after {
+   box-sizing: border-box;
+}
+* {
+   margin: 0;
+   padding: 0;
+}
+img,
+picture,
+svg,
+video {
+   display: block;
+   max-width: 100%;
+}
+input,
+select,
+textarea {
+   background-color: transparent;
+   outline: none;
+}
+button {
+   cursor: pointer;
+   background-color: transparent;
+   outline: none;
+   border: 0;
+}
+:root {
+   --bgc--success: #009432;
+   --bgc--warting: #f39c12;
+   --bgc--error: #ea2027;
+   --bgc--ol--success: #7bed9f;
+   --bgc--ol--warting: #eccc68;
+   --bgc--ol--error: #fab1a0;
+}
+body {
+   min-height: 100vh;
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 1;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.controller .btn__toast {
+   font-size: 20px;
+   color: white;
+   border-radius: 6px;
+   padding: 10px 20px;
+   margin: 0 10px;
+}
+
+.toast {
+   position: fixed;
+   top: 10px;
+   right: 10px;
+   color: white;
+   z-index: -1;
+}
+.toast__show {
+   margin: 10px 0px;
+   font-size: 20px;
+   border-radius: 6px;
+   overflow: hidden;
+   animation: ShowToast 2s ease-in-out forwards;
+}
+.toast__show span {
+   padding: 20px;
+   display: inline-block;
+}
+.toast__show--success {
+   background-color: var(--bgc--ol--success);
+   border-left: 5px solid var(--bgc--success);
+}
+.toast__show--warting {
+   background-color: var(--bgc--ol--warting);
+   border-left: 5px solid var(--bgc--warting);
+}
+.toast__show--error {
+   background-color: var(--bgc--ol--error);
+   border-left: 5px solid var(--bgc--error);
+}
+.bottom__toast {
+   width: 100%;
+   height: 5px;
+   animation: bottom_Toast ease-in-out 4s forwards;
+}
+.btn__success,
+.bottom__toast--success {
+   background-color: var(--bgc--success);
+}
+.btn__warting,
+.bottom__toast--waitng {
+   background-color: var(--bgc--warting);
+}
+.btn__error,
+.bottom__toast--error {
+   background-color: var(--bgc--error);
+}
+@keyframes bottom_Toast {
+   to {
+      width: 0%;
+   }
+}
+@keyframes ShowToast {
+   0% {
+      transform: translateX(100%);
+   }
+   25% {
+      transform: translateX(-10%);
+   }
+   50% {
+      transform: translateX(10%);
+   }
+   100% {
+      transform: translateX(0%);
+   }
+}
+@keyframes HideToast {
+   0% {
+      transform: translateX(0%);
+   }
+   25% {
+      transform: translateX(10%);
+   }
+   50% {
+      transform: translateX(-10%);
+   }
+   100% {
+      transform: translateX(200%);
+   }
+}

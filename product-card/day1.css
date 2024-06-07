@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Poppins&display=swap');
+:root {
+   --color_white: white;
+   --color_card: #2d3436;
+}
+*,
+*:before,
+*:after {
+   box-sizing: border-box;
+}
+* {
+   margin: 0;
+   padding: 0;
+}
+img,
+picture,
+svg,
+video {
+   display: block;
+   max-width: 100%;
+}
+input,
+select,
+textarea {
+   background-color: transparent;
+   outline: none;
+}
+button {
+   cursor: pointer;
+   outline: none;
+   border: 0;
+}
+body {
+   min-height: 100vh;
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 1;
+   font-family: 'Poppins', sans-serif;
+   display: flex;
+   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+   background-size: 400% 400%;
+   animation: gradient 15s ease infinite;
+   overflow: hidden;
+}
+@keyframes gradient {
+   0% {
+      background-position: 0% 50%;
+   }
+   50% {
+      background-position: 100% 50%;
+   }
+   100% {
+      background-position: 0% 50%;
+   }
+}
+.card {
+   margin: auto;
+   width: 350px;
+   height: 450px;
+   background-color: var(--color_card);
+   border-radius: 10px;
+   padding: 20px;
+   color: var(--color_white);
+}
+.card_head {
+   display: flex;
+   justify-content: space-between;
+   font-weight: bold;
+   font-size: 25px;
+}
+.card_img {
+   transition: transform 0.2s linear;
+}
+.card:hover .card_img {
+   transform: translateY(-100px) rotate(-25deg);
+}
+.card_img img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: -15px 100%;
+}
+.card_tilte,
+.card_price {
+   text-align: center;
+   font-weight: bold;
+   font-size: 20px;
+   margin: 10px;
+   transition: transform 0.2s linear;
+}
+.card:hover .card_tilte,
+.card:hover .card_price {
+   transform: translate(0px, -80px);
+}
+.card_tilte {
+   color: #27ae60;
+}
+.card_size,
+.card_color {
+   display: flex;
+   align-items: center;
+   margin: 15px;
+   z-index: -1;
+}
+.card_hidden {
+   margin-top: 100px;
+   opacity: 0;
+   transition: margin-top 0.2s linear, opacity 0.2s linear;
+}
+.card:hover .card_hidden {
+   margin-top: -15px;
+   opacity: 1;
+}
+.card_size span,
+.card_color span {
+   padding: 5px 10px;
+   border-radius: 3px;
+   background-color: #fff;
+   color: var(--color);
+   margin-left: 10px;
+   font-size: inherit;
+}
+.card_color span {
+   padding: 10px;
+   border-radius: 50%;
+   background-color: var(--color_cl);
+}
+.card_bnt button {
+   margin: 10px;
+   padding: 10px 25px;
+   background-color: #2ecc71;
+   border-radius: 5px;
+   color: var(--color_white);
+   transition: transform 0.2s ease;
+}
+.card_bnt button:hover {
+   transform: scale(0.9);
+}
